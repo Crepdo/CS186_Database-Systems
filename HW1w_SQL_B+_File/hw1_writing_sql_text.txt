@@ -1,0 +1,20 @@
+
+CREATE VIEW OutsideCourseCount AS
+SELECT s.sid COUNT(*) AS count
+FROM Student AS s, Dept AS d, Course AS c, Takes AS t
+WHERE s.sid = t.cid
+AND t.cid = c.cid
+AND c.deptid != s.deptid
+GROUP BY s.sid
+
+CREATE VIEW InsideCourseCount AS
+SELECT s.sid COUNT(*) AS count
+FROM Student AS s, Dept AS d, Course AS c, Takes AS t
+WHERE s.sid = t.cid
+AND t.cid = c.cid
+AND c.deptid = s.deptid
+GROUP BY s.sid
+
+SELECT s.sname
+FROM Student AS s, OutsideCourseCount AS o, InsideCourseCount AS i
+WHERE i

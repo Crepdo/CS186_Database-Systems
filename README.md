@@ -2,3 +2,4 @@
 ---
 UC Berkeley CS186 Fa22 &amp; ShanghaiTech CS150A Fa22  
 For coding homewrok, did not upload the databases for their size.  
+Fix many typos and problems in the original homework files

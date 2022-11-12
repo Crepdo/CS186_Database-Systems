@@ -10,12 +10,12 @@ def loadData():
     PlayerCollege = namedtuple('PlayerCollege', 'playername collegename')
         
     teams = []
-    for line in csv.reader(open("playerteam.csv", "rb"), delimiter='\t'):
+    for line in csv.reader(open("playerteam.csv", "rt",encoding="latin"), delimiter='\t'):
         p = PlayerTeam._make(line)
         teams.append(p)
 
     colleges = []
-    for line in csv.reader(open("playercollege.csv", "rb"), delimiter='\t'):
+    for line in csv.reader(open("playercollege.csv", "rt",encoding="latin"), delimiter='\t'):
         p = PlayerCollege._make(line)
         colleges.append(p)
  
@@ -24,8 +24,8 @@ def loadData():
 def partitionTable(table, hashfunction,buckets):
     hRes = defaultdict(list)
     for b in range(buckets):
-	hRes[b] = []
-    attribute = 'playername'
+        hRes[b] = []
+        attribute = 'playername'
     for s in table:
         hRes[hashfunction(getattr(s, attribute),buckets)].append(s)
     return hRes

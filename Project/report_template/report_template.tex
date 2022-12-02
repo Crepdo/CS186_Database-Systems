@@ -1,0 +1,91 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2017
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2017}
+
+\usepackage[final]{nips_2017}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2017}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{graphicx} 
+
+\usepackage{algorithm}  
+\usepackage{algpseudocode}  
+\usepackage{amsmath}  
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm  
+
+\hypersetup{colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue}}  
+
+\title{CS150A Database \\Course Project}
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{
+  Student 1\\
+  ID: xxxxxxxx\\
+  \texttt{email1@shanghaitech.edu.cn} \\
+  %% examples of more authors
+   \And
+  Student 2\\
+  ID: xxxxxxxx\\
+  \texttt{email2@shanghaitech.edu.cn}
+}
+
+\begin{document}
+% \nipsfinalcopy is no longer used
+
+\maketitle
+
+\begin{abstract}
+
+Compared with developing a novel machine learning algorihtm, building a machine learning system is less theoretical but more engineering, so it is important to get your hands dirty. To build an entire machine learning system, you have to go through some essential steps. We have listed 5 steps which we hope you to go through. Read the instructions of each section before you fill in. You are free to add more sections. \\
+If you use PySpark to implement the algorithms and want to earn some additional points, you should also report your implementation briefly in the last section.
+\end{abstract}
+
+\section{Explore the dataset}
+\textcolor{cyan}{Instruction: \\
+Explore the given dataset, report your findings about the dataset. You should not repeat the information provided in the 'Data Format' section of project.pdf. Instead, you can report the data type of each feature, the distribution of different values of some important features(maybe with visualization), is there any missing value, etc}\\\\
+\textbf{Your work below:}\\
+\section{Data cleaning}
+\textcolor{cyan}{Instruction: \\
+Some people treat data cleaning as a part of feature engineering, however we separate them here to make your work clearer. In this section, you should mainly deal with the missing values and the outliers. You can also do some data normalization here.}\\\\
+\textbf{Your work below:}\\
+\section{Feature engineering}
+\textcolor{cyan}{Instruction: \\
+In this section, you should select a subset of features and transform them into a data matrix which can be feed into the learning model you choose. Report your work with reasons.}\\\\
+\textbf{Your work below:}\\
+\section{Learning algorithm}
+\textcolor{cyan}{Instruction: \\
+In this section, you should describe the learning algorithm you choose and state the reasons why you choose it.}\\\\
+\textbf{Your work below:}\\
+
+\section{Hyperparameter selection and model performance}
+\textcolor{cyan}{Instruction: \\
+In this section, you should describe the way you choose the hyperparameters of your model, also compare the performance of the model with your chosen hyperparamters with models with sub-optimal hyperparameters}\\\\
+\textbf{Your work below:}\\
+\section{PySpark implementation (optional)}
+\end{document}
